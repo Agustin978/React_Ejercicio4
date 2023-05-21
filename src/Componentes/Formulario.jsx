@@ -7,7 +7,11 @@ const Formulario = () => {
     const [tareas, setTareas] = useState([]);
     return (
         <div>
-            <Form>
+            <Form onSubmit={(e) => {
+                e.preventDefault();
+                setTareas([...tareas, tarea]);
+                setTarea[''];
+            }}>
                 <Form.Group className="mb-3 d-flex" controlId="tarea">
                     <Form.Control type="text" placeholder="Ingrese una tarea" 
                     onChange={(e) => setTarea(e.target.value)}
@@ -18,7 +22,7 @@ const Formulario = () => {
                     </Button>
                 </Form.Group>
             </Form>
-            <ListaTareas></ListaTareas>
+            <ListaTareas arregloTareas={tareas}/>
         </div>
     );
 };

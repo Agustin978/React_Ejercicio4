@@ -1,10 +1,11 @@
 import { Button, ListGroup } from "react-bootstrap";
 
-const ItemTarea = () => {
+const ItemTarea = ({muestraTarea}) => {
+    //console.log(tarea);
     return (
         <div>
             <ListGroup.Item className="d-flex justify-content-between">
-                Un elemento agregado
+                <p>Tarea: {muestraTarea}</p>
                 <Button variant="danger">Borrar</Button>
             </ListGroup.Item>
         </div>

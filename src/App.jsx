@@ -1,5 +1,5 @@
 import {Container} from 'react-bootstrap'
-import Formulario from '../Componentes/Formulario'
+import Formulario from './Componentes/Formulario'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
