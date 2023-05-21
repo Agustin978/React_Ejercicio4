@@ -1,7 +1,6 @@
 import { Button, ListGroup } from "react-bootstrap";
 
 const ItemTarea = ({muestraTarea}) => {
-    //console.log(tarea);
     return (
         <div>
             <ListGroup.Item className="d-flex justify-content-between">
