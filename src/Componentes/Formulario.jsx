@@ -5,6 +5,14 @@ import { useState } from 'react';
 const Formulario = () => {
     const [tarea, setTarea] = useState('');
     const [tareas, setTareas] = useState([]);
+
+    const borraTarea = (nombreTarea) => 
+    {
+        //no puedo usar splice puesto que modificaria directamente el arreglo lo que no esta permitido en React.
+        //Filter es inmutable, osea que retorna un valor.
+        let arregloFlitrado = tareas.filter((itemTarea) => itemTarea !== nombreTarea);
+        setTareas(arregloFlitrado);
+    }
     return (
         <div>
             <Form onSubmit={(e) => {
@@ -22,7 +30,7 @@ const Formulario = () => {
                     </Button>
                 </Form.Group>
             </Form>
-            <ListaTareas arregloTareas={tareas}/>
+            <ListaTareas arregloTareas={tareas} funcionBorrarTarea={borraTarea}/>
         </div>
     );
 };
